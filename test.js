@@ -40,7 +40,6 @@ function filtroprezzo (lista){
 
         }
 
-
     }
    return console.log(nuovalista)
 
@@ -51,3 +50,15 @@ filtroprezzo(listaProdotti)
 
 //Funzione di filtro integrata in Javascript
 console.log(listaProdotti.filter((object) => object.prezzo > 250 ))
+
+
+
+//Split dell'URL
+
+let url = "https://sitodiecommerce.com/paginaDelProdotto?idProdotto=12312312312&userId=314123&time=8999"
+
+let urlSplit = url.split("?")
+
+let parametri = urlSplit[1].split("&")
+
+console.log(parametri)
