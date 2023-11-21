@@ -62,3 +62,8 @@ let urlSplit = url.split("?")
 let parametri = urlSplit[1].split("&")
 
 console.log(parametri)
+
+
+
+
+

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check palindromo</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        
+        function FrasePalindroma(){
+            
+            const fraseOriginale = prompt("Inserisci qui la tua frase");
+        
+            let fraseA = fraseOriginale.replace(/\W/g,"").toLowerCase();
+            let fraseB = fraseOriginale.replace(/\W/g,"").toLowerCase();
+        
+            fraseA = fraseA.split("")
+            fraseB = fraseB.split("")
+            
+            fraseB = fraseB.reverse();
+            
+        
+            console.log(fraseA)
+            console.log(fraseB)
+            
+            for(i = 0; i < fraseA.length; i++){
+
+                if (fraseA[i] == fraseB[i])  {
+                
+                alert("True")
+                return true
+                
+                
+                
+            } else {
+                
+                alert("False")
+                return false
+                
+            }
+
+
+            }
+        
+            
+        }
+        
+        
+        
+        
+        FrasePalindroma()
+        
+    </script>
+    
+    
+</body>
+</html>
