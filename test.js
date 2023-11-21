@@ -23,7 +23,15 @@ let listaProdotti = [
     },
 ]
 //Ordina secondo nome
-console.log(listaProdotti.sort((a,b) => a.nome - b.nome))
+console.log(listaProdotti.sort(function (a, b) {
+    if (a.nome < b.nome) {
+      return -1;
+    }
+    if (a.nome > b.nome) {
+      return 1;
+    }
+    return 0;
+  }))
 
 //Ordina secondo prezzo
 console.log(listaProdotti.sort((a,b) => a.prezzo - b.prezzo))
