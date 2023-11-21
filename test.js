@@ -10,7 +10,7 @@ let listaProdotti = [
         nome: "Mac",
         prezzo: 3000,
     },
-
+    
     {
         id: 3,
         nome: "Scrivania",
@@ -23,7 +23,31 @@ let listaProdotti = [
     },
 ]
 //Ordina secondo nome
- console.log(listaProdotti.sort((a,b) => a.nome - b.nome))
+console.log(listaProdotti.sort((a,b) => a.nome - b.nome))
 
- //Ordina secondo prezzo
- console.log(listaProdotti.sort((a,b) => a.prezzo - b.prezzo))
+//Ordina secondo prezzo
+console.log(listaProdotti.sort((a,b) => a.prezzo - b.prezzo))
+
+//Possibile funzione di filtro per prezzo
+function filtroprezzo (lista){
+    
+    nuovalista = []
+
+    for (i = 0; i < lista.length; i++){
+        if (lista[i].prezzo > 250){
+
+            nuovalista.push(lista[i]);
+
+        }
+
+
+    }
+   return console.log(nuovalista)
+
+
+}
+
+filtroprezzo(listaProdotti)
+
+//Funzione di filtro integrata in Javascript
+console.log(listaProdotti.filter((object) => object.prezzo > 250 ))
